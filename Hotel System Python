@@ -1,0 +1,264 @@
+class hotelSystem:
+
+    def __init__(self,rt='',s=0,r=0,t=0,a=30,Name='',Address='',Chckindate='',Chckoutdate='',RoomNo=205):
+        print ("***WELCOME TO HOTEl DAVIDSON***")
+        self.rt=rt
+        self.r=r
+        self.t=t
+        self.s=s
+        self.a=a
+        self.Name=Name
+        self.address=Address
+        self.Chckindate=Chckindate
+        self.Chckoutdate=Chckoutdate
+        self.RoomNo=RoomNo
+        
+    def BrowseHotel(self):
+        print ("\nPlease select the best Hotel option for you:")
+        print ("1.Hotel Option 1: $230/per night")
+        print ("2.Hotel Option 2: $150/per night")
+        print ("3.Hotel Option 3: $90/per night")
+        print ("4.Hotel Option 4: $120/per night")
+        x=int(input("\nWhat hotel option would you like to choose?"))
+        n=int(input("How many nights do you plan to stay?:"))
+        
+        if(x==1):
+            print ("You chose Hotel Option 1:")
+            self.s=230*n
+
+        elif (x==2):
+            print ("You chose Hotel Option 2:")
+            self.s=150*n
+           
+        elif (x==3):
+            print ("You chose Hotel Option 3:")
+            self.s=90*n
+
+        elif (x==4):
+            print ("You chose Hotel Option 4:")
+            self.s=120*n
+           
+
+        else:
+            print ("Invalid Hotel Option")
+         
+        print ("\nYour estimated Hotel total is:","$",self.s,"\n")
+       
+
+    def ReserveHotelRoom(self):
+        print ("\n***Please Click to Reserve Hotel Room Option:***")
+        print ("1.Hotel Room Type 1: $90/per night")
+        print ("2.Hotel Room Type 2: $110/per night")
+        print ("3.Hotel Room Type 3: $125/per night")
+        print ("4.Hotel Room Type 4: $140/per night")
+        x=int(input("\nSelect The Room Type You Would Like To Reserve?"))
+        c=int(input("How many nights do you plan to stay?"))
+
+        if (x==1):
+            print ("You Chose To Reserve Hotel Type 1:")
+            self.r=self.r+90*c
+
+        elif (x==2):
+            print ("You Chose To Reserve Hotel Type 2:")
+            self.r=self.r+110*c
+
+        elif (x==3):
+            print ("You Chose To Reserve Hotel Type 3:")
+            self.r=self.r+125*c
+
+        elif (x==4):
+            print ("You Chose To Reserve Hotel Type 4:")
+            self.r=self.r+140*c
+
+        else:
+            print("Invalid option")
+
+        print("\nYour Subtotal is $",self.r,"Please Check-in at Front Lobby.")
+        
+    def CheckIn(self):
+        print("***Please Enter Customer Details For Check-In:***")
+        self.Name=input("\nEnter Your First Name:")
+        self.Address=input("\nEnter Your Address:")
+        self.Chckindate=input("\nEnter The Check-In Date:")
+        self.Chckoutdate=input("\nEnter Your Check-Out Date:")
+        print("\nThank You",self.Name,"!","You're Assigned Room Number:",self.RoomNo)
+
+    def CheckOut(self):
+        print ("***Please Enter Info to Check-Out***")
+        self.Name=input("\nEnter Your First Name:")
+        print ("\n1.Hotel Room Type 1: $90/per night")
+        print ("2.Hotel Room Type 2: $110/per night")
+        print ("3.Hotel Room Type 3: $125/per night")
+        print ("4.Hotel Room Type 4: $140/per night")
+        x=int(input("\nWhat Room Type Did You Stay In?"))
+        c=int(input("How many nights did stay?"))
+
+        if (x==1):
+            print ("For Hotel Type 1:")
+            self.r=self.r+90*c
+
+        elif (x==2):
+            print ("For Hotel Type 2:")
+            self.r=self.r+110*c
+
+        elif (x==3):
+            print ("For Hotel Type 3:")
+            self.r=self.r+125*c
+
+        elif (x==4):
+            print ("For Hotel Type 4:")
+            self.r=self.r+140*c
+
+        else:
+            print("Invalid option")
+
+        print("\nYour estimated Subtotal is $",self.r)
+
+
+    def RoomService(self):
+        print ("***Room Service***")
+        print ("1.Breakfast Special $15")
+        print ("2.Breakfast Special Deluxe $20")
+        print ("3.Lunch Special $20")
+        print ("4.Lunch Special Deluxe $25")
+        print ("5.Dinner Special $30")
+
+        e=int(input("\nSelect The Room Service you would like:"))
+        
+        if (e==1):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+15*f
+
+        elif (e==2):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+20*f
+
+        elif (e==3):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+20*f
+
+        elif (e==4):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+25*f
+
+        elif (e==5):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+30*f
+        else:
+
+            print("Invalid option")
+
+
+        print ("\nYour Total Room Service Cost is","$",self.t,"\n")
+        
+
+    def CalculateCharges(self):
+        print ("***Calculate Total Charges***")
+        print ("\n1.Hotel Room Type 1: $90/per night")
+        print ("2.Hotel Room Type 2: $110/per night")
+        print ("3.Hotel Room Type 3: $125/per night")
+        print ("4.Hotel Room Type 4: $140/per night")
+        x=int(input("\nWhat Room Type Did You Stay In?"))
+        c=int(input("How many nights did stay?"))
+
+        if (x==1):
+            self.r=self.r+90*c
+
+        elif (x==2):
+            self.r=self.r+110*c
+
+        elif (x==3):
+            self.r=self.r+125*c
+
+        elif (x==4):
+            self.r=self.r+140*c
+
+        else:
+            print("Invalid option")
+        
+        print ("\n1.Breakfast Special $15")
+        print ("2.Breakfast Special Deluxe $20")
+        print ("3.Lunch Special $20")
+        print ("4.Lunch Special Deluxe $25")
+        print ("5.Dinner Special $30")
+
+        e=int(input("\nWhat Room Service Did You Order?:"))
+        
+        if (e==1):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+15*f
+
+        elif (e==2):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+20*f
+
+        elif (e==3):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+20*f
+
+        elif (e==4):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+25*f
+
+        elif (e==5):
+            f=int(input("Enter the number of orders:"))
+            self.t=self.t+30*f
+        else:
+
+            print("Invalid option")
+
+        print ("\nCustomer Details:")
+        print ("Room no.",self.RoomNo)
+        print ("Your Room rent is:",self.r)
+        self.rt=self.s+self.t+self.r
+        print ("Your Subtotal bill is:",self.r)
+        print ("Your Room Service bill is:",self.t)
+        print ("Additional Service Charges is",self.a)
+        print ("Your Grandtotal bill is:",self.rt+self.a,"\n")
+        self.RoomNo+=1
+
+def main():
+
+    a=hotelSystem()
+    
+    while (1):
+        print("1.Browse Hotel Room")
+        print("2.Reserve Hotel Room")
+        print("3.Check-In")
+        print("4.Check-Out")
+        print("5.Room Service")
+        print("6.Calculate Total Charges")
+        print("7.Cancel")
+        b=int(input("\nPlease select the best available option:"))
+     
+        if (b==1):
+            a.BrowseHotel()
+            break;
+
+        if (b==2):
+            a.ReserveHotelRoom()
+            break;
+           
+        if (b==3):
+            a.CheckIn()
+            break;
+
+
+        if (b==4):
+            a.CheckOut()
+            break;
+
+        if (b==5):
+            a.RoomService()
+            break;
+
+        if (b==6):
+            a.CalculateCharges()
+            break;
+
+        if (b==7):
+            print("Thank You For Visiting!")
+            quit()
+
+main()
+
